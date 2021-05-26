@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed and feedrate</title>
+    <script>
+        function SPEEDRATE() {
+            let D = parseFloat(document.getElementById("D").value);
+            let n = parseFloat(document.getElementById("n").value);
+            let Vc = (3.14159265 * D * n) / 1000;
+            document.getElementById("SPEEDRATE").value = Vc.toFixed(3);
+        }
+    </script>
+    <script>
+        function FEEDRATE() {
+            let fz = parseFloat(document.getElementById("FEED PER TOOTH").value);
+            let Zn = parseFloat(document.getElementById("NUMBER OF TEETH").value);
+            let n1 = parseFloat(document.getElementById("n1").value);
+            let Vf = (fz * Zn *n1);
+            document.getElementById("FEED RATE").value = Vf.toFixed(3);
+        }
+        alert("สรุป APE 122");
+    </script>
+    <style>
+        .head{
+            background-color:#7e62fcd8;
+            font-family: 'Itim', cursive;
+
+            margin: 50px;
+            border-radius: 50px;
+            width: 400px;
+            height: 60px;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .Calculator{
+            width: 350px;
+            height: 380px;
+            border: 10px solid #f64c90d8;
+            border-radius: 20px;
+            background-color:  #e0d90bd5;
+            padding: 15px;
+            margin: 20px;
+            font-family: 'Itim', cursive;
+        }
+        .Calculator h1{
+            text-align: center;
+        }
+        .Calculator input{
+            background-color: #e0162ed7;
+            border-radius:20px;
+            height: 20px;
+            font-family: 'Itim', cursive;
+        }
+        .Calculator button{
+            background-color: #5d0be0d5;
+            padding: 13px;
+            font-family: 'Itim', cursive;
+        }
+        h1{
+            font-size: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: 'Itim', cursive;
+        }
+        h2{
+            font-size: 45px;
+            font-family: 'Itim', cursive;
+            color:rgb(0, 0, 0);
+            padding: auto;
+        }
+        body{
+            background-color: #62e001dc
+        }
+
+        input{
+            margin: 10px;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">    
+</head>
+<body>
+    <center><div class="head">
+        <h2><r><u>Speed and feedrate</u></r>
+        </h2> </center>
+    </div>
+
+  <div class="container">
+    <!-- SPEED RATE -->
+    <div class="Calculator">
+        <h1><u>SPEED RATE</u></h1>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label>
+        <br>
+        <input type="text" name="" id="n" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Cutter Diameter (D) (D)</label>
+        <br>
+        <input type="text" name="" id="D" size=""> (mm)
+        <br>
+        <label for="" style="margin-left: 20px;">Speed Rate (Vc)</label>
+        <br>
+        <input type="text" name="" id="Speed Rate " size=""> (m/min)
+        <br><br><br> &nbsp; <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="SPEEDRATE()">ENTER</button>
+    </div>
+    <!-- FEED RATE -->
+    <div class="Calculator">
+        <h1><u>FEED RATE</u></h1>
+        <label for="" style="margin-left: 20px;">Feed Per Tooth (fz)</label>
+        <br>
+        <input type="text" name="" id="Feed Per Tooth" size=""> (mm/tooth)
+        <br>
+        <label for="" style="margin-left: 20px;">Number Of Teeth (z)</label>
+        <br>
+        <input type="text" name="" id="Number Of Teeth" size="">
+        <br>
+        <label for="" style="margin-left: 20px;">Spindle Speed (n)</label>
+        <br>
+        <input type="text" name="" id="n1" size=""> (rev/min)
+        <br>
+        <label for="" style="margin-left: 20px;">Feed Rate (Vf)</label>
+        <br>
+        <input type="text" name="" id="Feed Rate " size=""> (mm/min)
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="botton2" onclick="FEEDRATE()">ENTER</button>
+    </div>
+  </div>
+</body>
+</html>
